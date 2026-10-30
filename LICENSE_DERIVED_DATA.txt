@@ -1,0 +1,12 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+Author-created derived analytical data, matching and split metadata, fitted
+model artefacts, documentation, figures, tables and numerical outputs in this
+release are provided under CC BY 4.0. Please credit Nebi Seren and cite the
+repository record. Python source code is provided under the MIT licence in
+LICENSE.
+
+Original Amazon review text and other third-party source content are excluded
+from these licence grants and remain subject to the source provider's terms.
+No raw review text or direct user identifiers are redistributed in this release.

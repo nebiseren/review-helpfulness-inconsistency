@@ -1,0 +1,26 @@
+variable,description
+analysis_id,Sequential identifier for a retained analysis row; integer 1 to 479493
+category,Amazon review category; six categories listed in README.txt
+product_type,"Category-based classification: experience for Beauty, Books and CDs; search for Electronics, Industrial and Office"
+year,Review calendar year; 2019 to 2022
+month,Review calendar month; integer 1 to 12
+year_month,Review calendar year and month in YYYY-MM format
+rating_num,Posted star rating; integer 1 to 5
+rating_extremity,Absolute distance of posted star rating from 3
+helpful_vote,Observed nonnegative helpful-vote count
+any_helpful,1 if helpful_vote is positive; 0 otherwise
+verified_binary,1 for Verified Purchase; 0 otherwise
+word_count,Stored word count from the original preprocessing
+sentence_count,Stored detected sentence count from the original preprocessing
+char_count,Stored character count from the original preprocessing; includes counted spaces and punctuation
+review_depth,Natural logarithm of 1 plus word_count
+avg_word_length,char_count divided by word_count; reported as characters per word
+avg_sentence_length,word_count divided by sentence_count; reported as words per detected sentence
+text_expected_star_calibrated,Expected rating from the text model after isotonic calibration; 1 to 5
+text_argmax_star,Rating class with highest mixture probability; integer-valued 1 to 5
+text_max_probability,Maximum uncalibrated mixture class probability; 0 to 1
+inconsistency,Absolute difference between rating_num and text_expected_star_calibrated; 0 to 4
+text_more_positive,Maximum of text_expected_star_calibrated minus rating_num and zero
+text_more_negative,Maximum of rating_num minus text_expected_star_calibrated and zero
+discrete_inconsistency,Absolute difference between rating_num and text_argmax_star
+product_group,Integer product cluster code; not the original product identifier

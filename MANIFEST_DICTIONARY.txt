@@ -1,0 +1,18 @@
+SOURCE MATCHING MANIFEST
+record_type: development for text-model development; main for the analysis sample.
+record_id: source_pilot_row for development; analysis_id for main.
+category: original Amazon review category.
+parent_asin: source product identifier used for exact text lookup.
+text_sha256: SHA-256 of the UTF-8 review body.
+
+DEVELOPMENT SPLIT MANIFEST
+source_pilot_row: retained development-record identifier.
+parent_asin: source product identifier used to enforce disjoint product splits.
+rating_num: posted rating used as the supervised target, integer 1 to 5.
+category: original Amazon review category.
+split: train, validation or test.
+validation_role: calibration or selection for validation records; empty otherwise.
+
+The matching files contain public product identifiers and text hashes. They
+allow records to be linked to the source collection. They are not described
+as irreversibly anonymised. They contain no direct user identifiers or text.

@@ -1,0 +1,69 @@
+{
+  "analysis_type": "new documented reanalysis on retained empirical data",
+  "seed": 20260908,
+  "main_sample": "existing audited 479493 rows; rechecked below",
+  "development_exclusion": "exclude products from all 480000 original main-sample rows",
+  "placeholder_text_values": [
+    "",
+    "na",
+    "n/a",
+    "none",
+    "nan",
+    "null"
+  ],
+  "duplicate_key": [
+    "category",
+    "parent_asin",
+    "asin",
+    "user_id",
+    "review_date",
+    "rating_num",
+    "helpful_vote",
+    "verified_binary",
+    "text"
+  ],
+  "split": "GroupShuffleSplit 80% train / 10% validation / 10% test by parent_asin; validation split equally by product into mixture-selection and calibration subsets",
+  "vectorizer": {
+    "n_features": 131072,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "lowercase": true,
+    "strip_accents": "unicode",
+    "norm": "l2",
+    "alternate_sign": true,
+    "dtype": "float64",
+    "analyzer": "word",
+    "token_pattern": "(?u)\\b\\w\\w+\\b"
+  },
+  "classifier": {
+    "loss": "log_loss",
+    "penalty": "l2",
+    "alpha": 1e-05,
+    "max_iter": 100,
+    "tol": 0.0001,
+    "n_iter_no_change": 5,
+    "shuffle": true,
+    "random_state": 20260908,
+    "learning_rate": "optimal",
+    "average": true,
+    "early_stopping": false,
+    "n_jobs": 2
+  },
+  "mixture_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5
+  ],
+  "selection": "calibrators fitted on calibration half of validation; select mixture using calibrated MAE in separate selection half, ties choose lower balanced weight; refit chosen calibrator on full validation only; test used once",
+  "original_settings_recovered": false
+}
