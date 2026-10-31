@@ -3,7 +3,7 @@
 Analysis code for the article *Rating–text inconsistency, purchase verification and online review helpfulness* (Nebi Seren, Bursa Uludağ University).
 
 The data files, fitted text model and full outputs are archived on Zenodo:
-https://doi.org/10.5281/zenodo.23820378
+https://doi.org/10.5281/zenodo.23841864
 
 ## Repository contents
 
@@ -68,4 +68,4 @@ The recovered file contains third-party review text. Keep it private and do not 
 
 ## Citation
 
-Seren, N. (2026). Rating–text inconsistency, purchase verification and online review helpfulness [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23820378
+Seren, N. (2026). Rating–text inconsistency, purchase verification and online review helpfulness [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23841864
