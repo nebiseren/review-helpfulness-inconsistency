@@ -56,8 +56,8 @@ def main(root):
     ax.text(.41, .55, 'Association', ha='center', fontsize=8)
     arrow(ax, (.50, .77), (.50, .51), dashed=True)
     ax.text(.52, .69, 'Moderation', fontsize=8)
-    arrow(ax, (.19, .41), (.19, .26))
-    arrow(ax, (.81, .41), (.81, .26), dashed=True)
+    arrow(ax, (.19, .26), (.19, .41))
+    arrow(ax, (.81, .26), (.81, .41), dashed=True)
     fig.subplots_adjust(left=.03, right=.97, bottom=.03, top=.97)
     export(fig, destination, 'Figure_1_framework')
 

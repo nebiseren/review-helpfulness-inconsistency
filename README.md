@@ -13,7 +13,7 @@ https://doi.org/10.5281/zenodo.23820378
 | `code/01_train_and_score.py` | Trains, calibrates and scores the text model from the author's retained inputs (documentation of the original run) |
 | `code/02_estimate_models.py` | Estimates the 17 core regression models and saves coefficients and covariance matrices |
 | `code/03_verify_and_summarise.py` | Computes group-specific contrasts and reproducibility checks |
-| `code/04_tables_and_figures.py` | Builds the manuscript tables and Figures 3–4 from saved outputs |
+| `code/04_tables_and_figures.py` | Builds the eight main tables and Figures 1–4; empirical figures use saved outputs |
 | `code/06_retrain_from_source_manifest.py` | Retrains the text model from the public split manifest and recovered texts |
 | `code/07_verify_source_scores.py` | Compares saved scores with scores recomputed from recovered texts |
 | `code/08_measurement_sensitivity.py` | Runs four exploratory models and produces Tables S1–S3 |
@@ -22,7 +22,7 @@ https://doi.org/10.5281/zenodo.23820378
 | `models/training_config.json` | Exact text-model settings |
 | `data_dictionary.csv` | Variable definitions for `analysis_derived.csv.gz` |
 | `MANIFEST_DICTIONARY.txt` | Field definitions for the two manifests |
-| `reference_materials/` | Table 1 and Figures 1–2 |
+| `reference_materials/` | Table 1 (selected literature); Figures 1–2 are drawn by `code/09_draw_framework_and_flow.py` |
 | `requirements.txt` | Pinned Python dependencies |
 
 ## Reproducing the regressions
