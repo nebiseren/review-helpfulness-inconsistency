@@ -59,10 +59,10 @@ def main():
         for group in ['unverified','verified']:
             x=contr.loc[('directional',group+'_'+term)];rows.append([label,group.capitalize(),ratio(x),pf(x.p)])
     write(8,rows)
-    # Existing framework and cleaning-flow figures remain numerically unchanged.
-    source=root/'reference_materials/figures'
-    for name in ['Figure_1_framework','Figure_2_sample_flow']:
-        for ext in ['png','svg','eps','tiff']:shutil.copy2(source/(name+'.'+ext),figs/(name+'.'+ext))
+    # Draw the framework and cleaning-flow diagrams from their documented labels.
+    import runpy
+    diagrams = runpy.run_path(str(root/'code/09_draw_framework_and_flow.py'))
+    diagrams['main'](root)
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.spines.top':False,'axes.spines.right':False})
     def export(fig,name):
         fig.savefig(figs/(name+'.eps'),format='eps',facecolor='white')

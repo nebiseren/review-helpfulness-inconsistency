@@ -16,6 +16,8 @@ https://doi.org/10.5281/zenodo.23820378
 | `code/04_tables_and_figures.py` | Builds the manuscript tables and Figures 3–4 from saved outputs |
 | `code/06_retrain_from_source_manifest.py` | Retrains the text model from the public split manifest and recovered texts |
 | `code/07_verify_source_scores.py` | Compares saved scores with scores recomputed from recovered texts |
+| `code/08_measurement_sensitivity.py` | Runs four exploratory models and produces Tables S1–S3 |
+| `code/09_draw_framework_and_flow.py` | Draws the analytical framework and sample-selection diagram |
 | `setup_repository.py` | Checks SHA-256 hashes of the Zenodo files and places them in the expected folders |
 | `models/training_config.json` | Exact text-model settings |
 | `data_dictionary.csv` | Variable definitions for `analysis_derived.csv.gz` |
@@ -37,8 +39,14 @@ Python 3.12 was used.
    `python code/02_estimate_models.py --root .`
 5. Compute contrasts and checks:
    `python code/03_verify_and_summarise.py --root .`
-6. Rebuild tables and figures:
+6. Rebuild the eight main tables and four figures:
    `python code/04_tables_and_figures.py --root .`
+7. Run the four additional exploratory analyses and create Tables S1–S3:
+   `python code/08_measurement_sensitivity.py --root .`
+
+Table S1 also requires `results/test_predictions.csv.gz`, included in the archived outputs.
+Figures 1–2 can be drawn separately with:
+`python code/09_draw_framework_and_flow.py --root .`
 
 ## Rebuilding the text model (optional)
 

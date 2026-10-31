@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+/private/
+/results/
+/tables/
+/figures/
+/logs/
+/reporting/
+/models/*.joblib
+/*.csv.gz
+/*.csv
+/*.joblib
+/*.zip
