@@ -3,7 +3,7 @@
 Analysis code for the article *Rating–text inconsistency, purchase verification and online review helpfulness* (Nebi Seren, Bursa Uludağ University).
 
 The data files, fitted text model and full outputs are archived on Zenodo:
-https://doi.org/10.5281/zenodo.23844494
+https://doi.org/10.5281/zenodo.23844936
 
 ## Repository contents
 
@@ -31,9 +31,9 @@ Python 3.12 was used.
 
 1. Install the dependencies:
    `pip install -r requirements.txt`
-2. Download `analysis_derived.csv.gz` from the original Zenodo version: https://zenodo.org/api/records/23820378/files/analysis_derived.csv.gz/content . Its MD5 checksum is `2088306f2a3125a29998dfad44006089`.
-   Download `source_matching_manifest.csv.gz`, `development_split_manifest.csv.gz`, `text_model.joblib` and `analysis_outputs.zip` from https://doi.org/10.5281/zenodo.23844494 .
+2. Download `analysis_derived.csv.gz`, `source_matching_manifest.csv.gz`, `development_split_manifest.csv.gz`, `text_model.joblib` and `analysis_outputs.zip` from the current Zenodo version: https://doi.org/10.5281/zenodo.23844936 .
    Place all five files next to `setup_repository.py` without renaming or recompressing them.
+   The next step verifies each file against its expected SHA-256 checksum.
 3. Check and arrange the files:
    `python setup_repository.py`
 4. Re-estimate the models:
@@ -69,4 +69,4 @@ The recovered file contains third-party review text. Keep it private and do not 
 
 ## Citation
 
-Seren, N. (2026). Rating–text inconsistency, purchase verification and online review helpfulness [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23844494
+Seren, N. (2026). Rating–text inconsistency, purchase verification and online review helpfulness [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23844936
