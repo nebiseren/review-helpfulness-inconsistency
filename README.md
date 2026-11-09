@@ -18,6 +18,7 @@ https://doi.org/10.5281/zenodo.23844936
 | `code/07_verify_source_scores.py` | Compares saved scores with scores recomputed from recovered texts |
 | `code/08_measurement_sensitivity.py` | Runs four exploratory models and produces Tables S1–S3 |
 | `code/09_draw_framework_and_flow.py` | Draws the analytical framework and sample-selection diagram |
+| `code/10_interior_absolute_sensitivity.py` | Re-estimates pooled absolute-discrepancy M1/M2 for two-to-four-star reviews (post hoc) |
 | `setup_repository.py` | Checks SHA-256 hashes of the Zenodo files and places them in the expected folders |
 | `models/training_config.json` | Exact text-model settings |
 | `data_dictionary.csv` | Variable definitions for `analysis_derived.csv.gz` |
@@ -48,6 +49,15 @@ Python 3.12 was used.
 Table S1 also requires `results/test_predictions.csv.gz`, included in the archived outputs.
 Figures 1–2 can be drawn separately with:
 `python code/09_draw_framework_and_flow.py --root .`
+
+
+## Additional post hoc rating-range analysis
+
+The follow-up absolute-discrepancy sensitivity analysis was conducted after the original Zenodo v4 archive. It uses the same `analysis_derived.csv.gz` file, excludes one- and five-star reviews (n=95,185), and fits M1/M2 with the original rating-extremity control or with posted-rating indicators. Standard errors remain clustered by product.
+
+Run: `python code/10_interior_absolute_sensitivity.py --root .`
+
+Outputs: `results/additional_checks/interior_absolute_sensitivity.csv`. A copy of the coefficients and contrasts is available in this repository at `results/interior_absolute_sensitivity.csv`. The analysis is exploratory and does not independently validate the text-based discrepancy measure. The original Zenodo v4 code archive remains unchanged.
 
 ## Rebuilding the text model (optional)
 
